@@ -1,21 +1,28 @@
 let $ = document.getElementById.bind(document);
 
-$("tinhSoNguyenTo").onclick = function(){
-    var n = $("n").value;
-    var ketQua = "";
-
-    // kiểm tra số nhập vào có phải là số nguyên tố hay không
+function kiemTraSNT(n){
     if(n < 2){
-        console.log(n + " Không phải là số nguyên tố");
-    }else{
-        for(i = 2; i <= (n-1); i++){
-            if(n % i == 0){
-                console.log("Không phải là số nguyên tố"); 
-            }else{
-                ketQua += i;
-            };
-        };
+        return 0;
     };
 
-    console.log(ketQua);
+    for(i = 2; i <= Math.sqrt(n); i++){
+        if(n % i == 0){
+            return 0;
+        }
+    };
+    return 1;
+};
+
+$("tinhSoNguyenTo").onclick = function(){
+    var n = $("n").value *1;
+    var ketQua = "";
+
+    if(n >= 2){
+        console.log(n + " là số nguyên tố");
+    };
+    for(i = 3; i < n; i += 2){
+        if(kiemTraSNT(n) == 1){
+            console.log(ketQua += i);
+        };
+    };
 };
