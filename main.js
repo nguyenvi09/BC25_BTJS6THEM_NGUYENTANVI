@@ -13,8 +13,8 @@ function kiemTraSNT(n){
     return 1;
 };
 
-var ketQua = "";
 function inSoNguyenTo(n){
+    var ketQua = "";
     for(j = 1; j <= n; j++){
         if(kiemTraSNT(j) == 1){
             ketQua += j + " ";
@@ -25,8 +25,9 @@ function inSoNguyenTo(n){
 
 $("tinhSoNguyenTo").onclick = function(){
     var n = $("n").value *1;
+    var ketQuaIn = "";
 
-    inSoNguyenTo(n);
+    ketQuaIn = inSoNguyenTo(n);
 
-    $("ketQua").innerHTML = ketQua;
+    $("ketQua").innerHTML = ketQuaIn;
 };
