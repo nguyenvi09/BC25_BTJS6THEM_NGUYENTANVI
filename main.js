@@ -26,11 +26,7 @@ function inSoNguyenTo(n){
 $("tinhSoNguyenTo").onclick = function(){
     var n = $("n").value *1;
 
-    if(kiemTraSNT(n) == 1){
-       inSoNguyenTo(n);
-    }else{
-        ketQua = n + "không phải số nguyên tố";
-    };
+    inSoNguyenTo(n);
 
     $("ketQua").innerHTML = ketQua;
 };
