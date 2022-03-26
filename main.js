@@ -39,7 +39,7 @@ function inSoNguyenTo(n){
 };
 
 $("inSoNguyenTo").onclick = function(){
-    var n = $("n").value *1;
+    var n = $("txtNumber").value *1;
     var ketQuaIn = "";
     
     ketQuaIn = inSoNguyenTo(n);
